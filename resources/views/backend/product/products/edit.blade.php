@@ -217,6 +217,27 @@
                                         <textarea class="aiz-text-editor" name="description">{{ $product->getTranslation('description', $lang) }}</textarea>
                                     </div>
                                 </div>
+                                <!-- Spesifikasi -->
+                                <div class="form-group">
+                                    <label class="fs-13">{{translate('Spesifikasi')}}</label>
+                                    <div class="">
+                                        <textarea class="aiz-text-editor" name="spesifikasi">{{ $product->getTranslation('spesifikasi', $lang) }}</textarea>
+                                    </div>
+                                </div>
+                                <!-- Jaminan Dan Layanan -->
+                                <div class="form-group">
+                                    <label class="fs-13">{{translate('Jaminan Dan Layanan')}}</label>
+                                    <div class="">
+                                        <textarea class="aiz-text-editor" name="jaminan dan layanan">{{ $product->getTranslation('jaminan dan layanan', $lang) }}</textarea>
+                                    </div>
+                                </div>
+                                <!-- Simulasi Kredit -->
+                                <div class="form-group">
+                                    <label class="fs-13">{{translate('Simulasi kredit')}}</label>
+                                    <div class="">
+                                        <textarea class="aiz-text-editor" name="simulasi kredit">{{ $product->getTranslation('simulasi kredit', $lang) }}</textarea>
+                                    </div>
+                                </div>
                             </div>
 
                             <!-- Refund -->
@@ -286,6 +307,28 @@
                                             <span></span>
                                         </label>
                                         <small class="text-muted">{{ translate('If you enable this, this product will be granted as a todays deal product.') }}</small>
+                                    </div>
+                                </div>
+                                <!-- Pre Orders -->
+                                <div class="form-group row">
+                                    <label class="col-md-3 col-from-label">{{translate('Pre Orders')}}</label>
+                                    <div class="col-md-9">
+                                        <label class="aiz-switch aiz-switch-success mb-0 d-block">
+                                            <input type="checkbox" name="pre_orders" value="1" @if($product->pre_orders == 1) checked @endif>
+                                            <span></span>
+                                        </label>
+                                        <small class="text-muted">{{ translate('If you enable this, this product will be granted as a pre orders product.') }}</small>
+                                    </div>
+                                </div>
+                                <!-- Indent -->
+                                <div class="form-group row">
+                                    <label class="col-md-3 col-from-label">{{translate('Indent')}}</label>
+                                    <div class="col-md-9">
+                                        <label class="aiz-switch aiz-switch-success mb-0 d-block">
+                                            <input type="checkbox" name="indent" value="1" @if($product->indent == 1) checked @endif>
+                                            <span></span>
+                                        </label>
+                                        <small class="text-muted">{{ translate('If you enable this, this product will be granted as a indent product.') }}</small>
                                     </div>
                                 </div>
                             </div>
